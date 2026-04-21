@@ -1,0 +1,287 @@
+/* ===============================
+   リセット & 基本設定
+=============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "Meiryo",
+    sans-serif;
+  line-height: 1.8;
+  color: #222;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: #005BAC;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   レイアウト
+=============================== */
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.section-link {
+  margin-top: 24px;
+}
+
+/* ===============================
+   ヘッダー
+=============================== */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #D9E1EA;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+}
+
+.site-logo img {
+  width: 60px;
+}
+
+.site-title-group {
+  flex-grow: 1;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.site-subtitle {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+/* ナビ */
+.global-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.global-nav a {
+  font-size: 14px;
+  color: #222;
+}
+
+.global-nav a:hover {
+  color: #005BAC;
+}
+
+/* ===============================
+   メインビジュアル
+=============================== */
+.hero {
+  background: #F5F8FC;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.lab-name-en {
+  font-size: 14px;
+  color: #555;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.catchcopy {
+  font-size: 18px;
+  color: #005BAC;
+  font-weight: bold;
+}
+
+/* ===============================
+   見出し
+=============================== */
+h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  border-left: 5px solid #005BAC;
+  padding-left: 12px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+/* ===============================
+   ボタン
+=============================== */
+.button-link {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #005BAC;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.button-link:hover {
+  background: #0F6FC6;
+  text-decoration: none;
+}
+
+/* ===============================
+   お知らせ
+=============================== */
+.news-list {
+  list-style: none;
+  padding: 0;
+}
+
+.news-list li {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #D9E1EA;
+}
+
+.news-list time {
+  color: #555;
+  min-width: 100px;
+}
+
+/* ===============================
+   カード（研究テーマ）
+=============================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid #D9E1EA;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+/* ===============================
+   ギャラリー
+=============================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ===============================
+   フッター
+=============================== */
+.site-footer {
+  background: #005BAC;
+  color: #fff;
+  padding: 32px 0;
+  margin-top: 60px;
+}
+
+.site-footer p {
+  margin: 6px 0;
+}
+
+.site-footer .copyright {
+  font-size: 12px;
+  margin-top: 12px;
+  opacity: 0.8;
+}
+
+/* ===============================
+   レスポンシブ
+=============================== */
+@media (max-width: 768px) {
+
+  /* ナビ縦 */
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .global-nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* ヒーロー縦 */
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  /* カード1列 */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ギャラリー2列 */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
